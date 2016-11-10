@@ -35,18 +35,18 @@ public class BookDAO {
 			   
 			   JSONArray arr = new JSONArray();
 			   while(rs.next()){
-			    JSONObject obj = new JSONObject();
-			    obj.put("isbn", rs.getString("bisbn"));
-			    obj.put("title", rs.getString("btitle"));
-			    obj.put("img", rs.getString("bimgurl"));
-			    obj.put("author", rs.getString("bauthor"));
-			    obj.put("price", rs.getString("bprice"));
-			    arr.add(obj);
-		  }
+				    JSONObject obj = new JSONObject();
+				    obj.put("isbn", rs.getString("bisbn"));
+				    obj.put("title", rs.getString("btitle"));
+				    obj.put("img", rs.getString("bimgurl"));
+				    obj.put("author", rs.getString("bauthor"));
+				    obj.put("price", rs.getString("bprice"));
+				    arr.add(obj);
+			   }
 		   
 			   result = arr.toJSONString();
 		  } catch (Exception e) {
-			  e.printStackTrace();
+			   e.printStackTrace();
 		  }finally{
 			   try {
 				    rs.close();
